@@ -1,0 +1,3 @@
+pierre_boissinot_sheet_translation_homepage:
+    path:     /
+    defaults: { _controller: PierreBoissinotSheetTranslationBundle:Default:index }

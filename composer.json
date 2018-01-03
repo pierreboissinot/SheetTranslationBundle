@@ -1,0 +1,19 @@
+{
+    "name": "pierre/sheet-translation-bundle",
+    "description": "Google Spreadsheet adapter for php-translation/symfony-bundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pierre Boissinot",
+            "email": "pierre.boissinot@lephare.com"
+        }
+    ],
+    "require": {},
+    "autoload" : {
+        "psr-0" : {
+            "PierreBoissinot\\SheetTranslationBundle" : ""
+        }
+    },
+    "target-dir" : "PierreBoissinot/SheetTranslationBundle"
+}
