@@ -53,11 +53,11 @@ class GoogleClientWrapper
         $client = new Google_Client();
         $client->setApplicationName($this->applicationName);
         $client->setScopes($this->scopes);
-        $client->setAuthConfig(CLIENT_SECRET_PATH);
+        $client->setAuthConfig($this->clientSecretPath);
         $client->setAccessType('offline');
 
         // Load previously authorized credentials from a file.
-        $credentialsPath = $this->expandHomeDirectory(CREDENTIALS_PATH);
+        $credentialsPath = $this->expandHomeDirectory($this->clientSecretPath);
         if (file_exists($credentialsPath)) {
             $accessToken = json_decode(file_get_contents($credentialsPath), true);
         } else {
