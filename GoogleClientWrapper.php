@@ -34,7 +34,7 @@ class GoogleClientWrapper
 
     function __construct()
     {
-        $this->applicationName = 'Google Sheet API PHP used for translation bundle';
+        $this->applicationName = 'Google Sheets API PHP Quickstart';
         $this->credentialsPath = '~/.credentials/sheets.googleapis.com-php-quickstart.json';
         $this->clientSecretPath = __DIR__ . '/client_secret.json';
         $this->scopes = implode(
