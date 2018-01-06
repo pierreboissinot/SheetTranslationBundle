@@ -36,7 +36,7 @@ class GoogleClientWrapper
     {
         $this->applicationName = 'Google Sheet API PHP used for translation bundle';
         $this->credentialsPath = '~/.credentials/sheets.googleapis.com-php-quickstart.json';
-        $this->clientSecretPath = __DIR__ . '/client_secret.json';
+        $this->clientSecretPath = '~/workspace/gsheet-adapter/client_secret.json';
         $this->scopes = implode(
             ' ',
             array(
