@@ -2,6 +2,7 @@
 
 namespace PierreBoissinot\SheetTranslationBundle\DependencyInjection;
 
+use PierreBoissinot\SheetTranslationBundle\Sheet;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
@@ -22,7 +23,12 @@ class PierreBoissinotSheetTranslationExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
+        $adapterDef = $container->register('php_translation.adapter.sheet');
+        $adapterDef
+            ->setClass(Sheet::class);
+        /*
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
+        */
     }
 }
