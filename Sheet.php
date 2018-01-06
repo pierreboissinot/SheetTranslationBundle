@@ -1,6 +1,6 @@
 <?php
 
-namespace Translation\PlatformAdapter\Sheet;
+namespace PierreBoissinot\SheetTranslationBundle;
 
 use Google_Client;
 use Google_Service_Sheets;
@@ -24,9 +24,10 @@ class Sheet implements Storage, TransferableStorage
 
     private $spreadsheetId = '1KrInPpO_oXs99GBjiwYRvz_y9sPiO1aeV_IxSflT7aQ';
 
-    public function __construct(Google_Client $client)
+    public function __construct()
     {
-        $this->client = $client;
+        $wrapper = new GoogleClientWrapper();
+        $this->client = $wrapper->getClient();
         $this->sheetService = new Google_Service_Sheets($this->client);
     }
 

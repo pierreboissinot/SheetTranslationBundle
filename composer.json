@@ -9,7 +9,14 @@
             "email": "pierre.boissinot@lephare.com"
         }
     ],
-    "require": {},
+    "require": {
+        "php": "^7.0",
+        "php-translation/common": "^0.2",
+        "php-translation/symfony-storage": "^0.3.2",
+        "symfony/translation": "^2.7 || ^3.0",
+        "symfony/yaml": "^2.7 || ^3.0",
+        "google/apiclient": "^2.2"
+    },
     "autoload" : {
         "psr-0" : {
             "PierreBoissinot\\SheetTranslationBundle" : ""
